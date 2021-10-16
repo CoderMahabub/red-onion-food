@@ -1,0 +1,14 @@
+.footer-top img{
+    width: 150px;
+    height: auto;
+}
+.footer-top{
+    
+    border-bottom: 2px solid rgb(73, 72, 72);
+}
+.footer-links a{
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
