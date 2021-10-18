@@ -4,7 +4,7 @@ const useItems = () => {
 
 
     useEffect(() => {
-        fetch('foodItems.json')
+        fetch('https://raw.githubusercontent.com/CoderMahabub/red-onion-food/main/public/foodItems.json')
             .then(res => res.json())
             .then(data => setFoodItem(data.items))
     }, [])

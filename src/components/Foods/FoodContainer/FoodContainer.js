@@ -1,12 +1,14 @@
 import React from 'react';
 import { Card, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import './FoodContainer.css';
 
 const FoodContainer = ({ foodItem }) => {
-    const { fTitle, fDescription, fPrice, fThumbnail } = foodItem;
+    const { foodId, fTitle, fDescription, fPrice, fThumbnail } = foodItem;
     return (
         <Col>
             <Card>
-                <Card.Img variant="top" src={fThumbnail} />
+                <Card.Img className="food-thumbnail" variant="top" src={fThumbnail} />
                 <Card.Body>
                     <Card.Title>{fTitle}</Card.Title>
                     <Card.Text>
@@ -15,7 +17,9 @@ const FoodContainer = ({ foodItem }) => {
                     <strong className="text-muted">{fPrice}</strong>
                 </Card.Body>
                 <Card.Footer>
-                    <button className="btn-primary">Select Item</button>
+                    <Link to={`/food/${foodId}`}>
+                        <button className="btn-primary">Select Item</button>
+                    </Link>
                 </Card.Footer>
             </Card>
         </Col>

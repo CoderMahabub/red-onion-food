@@ -1,10 +1,11 @@
 import React from 'react';
-import { Button, CardGroup, Row } from 'react-bootstrap';
+import { Button, Row } from 'react-bootstrap';
 import useItems from '../../hooks/useItems';
 import FoodContainer from './FoodContainer/FoodContainer';
 
 const Foods = () => {
     const { foodItems } = useItems();
+    // console.log(foodItems);
     return (
         <div className="my-5">
             {/* <h1>Foods{foodItem.length}</h1> */}

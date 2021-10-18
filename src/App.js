@@ -7,6 +7,7 @@ import Header from './components/Header/Header';
 import AuthProvider from './context/AuthProvider';
 import Register from './components/Register/Register';
 import Footer from './components/Footer/Footer';
+import Food from './components/Foods/FoodContainer/Food/Food';
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
             </Route>
             <Route path="/register">
               <Register></Register>
+            </Route>
+            <Route path="/food/:foodId">
+              <Food></Food>
             </Route>
             <Route path="*">
               <NotFound></NotFound>
